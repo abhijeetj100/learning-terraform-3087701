@@ -22,3 +22,8 @@ resource "aws_instance" "blog" {
     Name = "HelloWorld"
   }
 }
+
+resource "aws_s3_bucket" "tf-bucket" {
+  bucket = "aj-bucket-123",
+  acl = "private"
+}
