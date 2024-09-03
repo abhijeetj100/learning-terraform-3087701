@@ -27,7 +27,7 @@ resource "aws_s3_bucket" "tf-bucket" {
   bucket = "aj-bucket-123"
 }
 
-resource "aws_s3_bucket_acl" "example" {
+resource "aws_s3_bucket_acl" "tf-bucket" {
 
   bucket = aws_s3_bucket.tf-bucket.id
   acl    = "private"
