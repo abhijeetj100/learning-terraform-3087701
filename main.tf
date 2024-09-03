@@ -25,5 +25,10 @@ resource "aws_instance" "blog" {
 
 resource "aws_s3_bucket" "tf-bucket" {
   bucket = "aj-bucket-123"
-  acl = "private"
+}
+
+resource "aws_s3_bucket_acl" "example" {
+
+  bucket = aws_s3_bucket.tf-bucket.id
+  acl    = "private"
 }
